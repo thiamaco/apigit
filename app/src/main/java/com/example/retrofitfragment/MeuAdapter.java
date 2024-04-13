@@ -83,7 +83,7 @@ public class MeuAdapter extends RecyclerView.Adapter<MeuAdapter.ViewHolder> {
             MeuFragmento meuFragmento = new MeuFragmento();
             meuFragmento.setArguments(args);
             FragmentTransaction fragmentTransaction = ((FragmentActivity) context).getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.add(R.id.container, meuFragmento);
+            fragmentTransaction.replace(R.id.container, meuFragmento);
 
             fragmentTransaction.addToBackStack(null);
 

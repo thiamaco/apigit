@@ -92,7 +92,7 @@ public class Repositorio extends Fragment {
             }
             @Override
             public void onFailure(Call<List<Results>> call, Throwable t) {
-                Toast.makeText(getContext(), "Falha na conexão", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Falha na conexão"+repositorio, Toast.LENGTH_SHORT).show();
             }
         });
     }

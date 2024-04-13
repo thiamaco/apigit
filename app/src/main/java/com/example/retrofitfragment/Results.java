@@ -16,9 +16,26 @@ public class Results {
     private Owner owner;
     @SerializedName("html_url")
     private String htmlUrl;
-
+    private String default_branch;
+    private String language;
     private String description;
 
+
+    public String getDefault_branch() {
+        return default_branch;
+    }
+
+    public void setDefault_branch(String default_branch) {
+        this.default_branch = default_branch;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
 
     public long getId() {
         return id;

@@ -38,23 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-       carregarFragmentoInicial();
     }
 
-    private void carregarFragmentoInicial() {
-        // Criar uma instância do fragmento que você deseja abrir
-        PesquisarFragment meuFragmento = new PesquisarFragment();
 
-        // Iniciar uma transação de fragmento
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-        // Substituir a MainActivity pelo fragmento
-        transaction.replace(android.R.id.content, meuFragmento);
-
-        // Adicionar a transação à pilha de retrocesso (back stack)
-        transaction.addToBackStack(null);
-
-        // Confirmar a transação
-        transaction.commit();
-    }
 }

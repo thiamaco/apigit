@@ -30,9 +30,9 @@ import java.util.List;
 
 
 public class MeuAdapterInfo extends RecyclerView.Adapter<MeuAdapterInfo.ViewHolder> {
-    List<Results> materias;
+    Results materias;
     private FragmentManager fragmentManager;
-    public MeuAdapterInfo(List<Results> materias) {
+    public MeuAdapterInfo(Results materias) {
         this.materias = materias;
         this.fragmentManager = fragmentManager;
     }
@@ -64,7 +64,7 @@ public class MeuAdapterInfo extends RecyclerView.Adapter<MeuAdapterInfo.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        Results dados = materias.get(position);
+        Results dados = materias;
         holder.txtRepositorio.setText(dados.getName());
         holder.txtNota.setText(dados.getFullName());
         Glide.with(holder.imgRepositorio.getContext())
@@ -100,6 +100,6 @@ public class MeuAdapterInfo extends RecyclerView.Adapter<MeuAdapterInfo.ViewHold
     }
     @Override
     public int getItemCount() {
-        return materias.size();
+        return materias.hashCode();
     }
 }

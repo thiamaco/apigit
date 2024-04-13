@@ -12,7 +12,7 @@ public interface Api {
             @Path("username") String username
     );
     @GET("repos/{username}/{repos}")
-    Call<List<Results>> getRepositorioInfo(
+    Call<Results> getRepositorioInfo(
             @Path("username") String username, @Path("repos") String repos
     );
 

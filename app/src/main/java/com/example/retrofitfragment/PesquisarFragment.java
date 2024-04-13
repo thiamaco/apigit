@@ -46,14 +46,9 @@ public class PesquisarFragment extends Fragment {
                     args.putString("repositorio", editRepositorio.getText().toString());
                     Repositorio meuFragmento = new Repositorio();
                     meuFragmento.setArguments(args);
-                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction transaction = fragmentManager.beginTransaction();
-
-
-                    transaction.replace(getId(), meuFragmento);
-
+                    FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.container, meuFragmento);
                     transaction.addToBackStack(null);
-
                     transaction.commit();
 
                 }else{
